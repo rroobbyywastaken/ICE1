@@ -14,15 +14,13 @@ public class CardTrick {
         
         Card[] hand = new Card[7];
 
-        for (int i = 0; i < hand.length; i++) {
-            Card card = new Card();
-            //card.setValue(insert call to random number generator here)
+        for (Card hand1 : hand) {
+            Card card = new Card();            //card.setValue(insert call to random number generator here)
             // 
             //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
         }
-
         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
         // Hint: You can ask for values 1 to 10, and then
@@ -30,7 +28,6 @@ public class CardTrick {
         //       1 for Hearts, 2 for Diamonds, etc. (remember arrays are 0-based though)
         // 
         // Then loop through the cards in the array to see if there's a match.
-        
         // If the guess is successful, invoke the printInfo() method below.
         
     }
@@ -40,6 +37,20 @@ public class CardTrick {
      * replace this information with your own.
      * @author Paul Bonenfant Jan 2022
      */
+         Card[] hand = new Card[7];
+
+    public CardTrick() {
+    }
+
+    public Card[] getHand() {
+        return hand;
+    }
+
+    public void setHand(Card[] hand) {
+        this.hand = hand;
+    }
+         
+         
     private static void printInfo() {
     
         System.out.println("Congratulations, you guessed right!");
